@@ -1,4 +1,4 @@
-<div class="flex flex-wrap w-full justify-center items-center my-16 px-12 md:justify-between md:flex-no-wrap md:px-0">
+<div class="flex flex-wrap w-full justify-center items-center my-12 px-4 md:justify-between md:flex-no-wrap md:px-0">
   <div class="order-2 md:order-1 text-center md:text-left">
     <div class="text-4xl md:text-4xl relative leading-tight">
       <span class="absolute hidden md:inline md:-ml-12">👋🏼</span>
@@ -6,14 +6,26 @@
     </div>
     <h2 class="text-2xl mt-4">Welcome to my portfolio.</h2>
   </div>
-  <div class="order-1 mb-8 md:mb-0">
-    <div class="w-64">
+  <div class="order-1 mb-8 md:mb-0" x-data="{ imgIndex: 0 }" @mouseenter="imgIndex += 1">
+    <div x-show="imgIndex % 5 == 0" class="w-64">
       <%= image_tag 'maxmoji_computer.png' %>
+    </div>
+    <div x-show="imgIndex % 5 == 1" class="w-64">
+      <%= image_tag 'maxmoji_shrug.png' %>
+    </div>
+    <div x-show="imgIndex % 5 == 2" class="w-64">
+      <%= image_tag 'maxmoji_thumbs_down.png' %>
+    </div>
+    <div x-show="imgIndex % 5 == 3" class="w-64">
+      <%= image_tag 'maxmoji_hand_on_face.png' %>
+    </div>
+    <div x-show="imgIndex % 5 == 4" class="w-64">
+      <%= image_tag 'maxmoji_angry.png' %>
     </div>
   </div>
 </div>
 
-<div class="w-full px-12 md:px-0 my-16">
+<div class="w-full px-4 md:px-0 my-16">
   <div class="grid grid-cols-2 gap-4">
     <div class="col-span-2 text-center">
       <h2 class="text-2xl font-bold underline">Websites I've built</h2>
@@ -31,7 +43,7 @@
   </div>
 </div>
 
-<div class="w-full px-12 md:px-0 my-16">
+<div class="w-full px-4 md:px-0 my-16">
   <div class="grid grid-cols-2 gap-4">
     <div class="col-span-2 text-center">
       <h2 class="text-2xl font-bold underline">Coding projects</h2>
