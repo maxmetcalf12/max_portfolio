@@ -18,18 +18,16 @@
     <div class="col-span-2 text-center">
       <h2 class="text-2xl font-bold underline">Websites I've built</h2>
     </div>
-    <div class="tilt-card">
-      podnotes.fm
-    </div>
-    <div class="tilt-card">
-      Nocial
-    </div>
-    <div class="tilt-card">
-      Review Audit
-    </div>
-    <div class="tilt-card">
-      LEK Associate Tools
-    </div>
+    <% if @websites.present? %>
+      <% @websites.each do |website| %>
+        <a href="https://<%=website.url %>" class="tilt-card">
+          <%= website.name %>
+          <% unless website.active %>
+            <span class="italic text-gray-500 text-sm tracking-tight">(in progress)</span>
+          <% end %>
+        </a>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
@@ -39,19 +37,19 @@
       <h2 class="text-2xl font-bold underline">Coding projects</h2>
     </div>
     <div class="tilt-card">
-      Daily time tracker
+      Daily time tracker <span class="italic text-gray-500 text-sm tracking-tight">(in progress)</span>
     </div>
     <div class="tilt-card">
-      Budget tool
+      Budget tool <span class="italic text-gray-500 text-sm tracking-tight">(in progress)</span>
     </div>
     <div class="tilt-card">
-      Goals tracker
+      Goals tracker <span class="italic text-gray-500 text-sm tracking-tight">(in progress)</span>
     </div>
     <div class="tilt-card">
-      Money compounding calculator
+      Money compounding calculator <span class="italic text-gray-500 text-sm tracking-tight">(in progress)</span>
     </div>
     <div class="tilt-card">
-      Stock option price calculator
+      Stock option price calculator <span class="italic text-gray-500 text-sm tracking-tight">(in progress)</span>
     </div>
   </div>
 </div>
