@@ -1,7 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: [],
+  purge: {
+    content: [
+      "./app/views/**/*.html.erb",
+      "./app/javascript/css/**/*.scss",
+    ]
+  },
   theme: {
     extend: {
       fontFamily: {
